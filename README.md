@@ -3,7 +3,7 @@
 ## 起動（Python・SOFAのインストール不要）
 
 1. [起動用ZIPをダウンロード](https://github.com/naoki-research1213/guidewire/releases/latest/download/GuidewireSimulator-Windows-x64-2026-10-15.zip)。
-2. ZIPを右クリックして「すべて展開」。書き込み可能なフォルダに置いてください。
+2. ZIPを右クリックして「すべて展開」。フォルダ全体を展開してください。
 3. 展開先の START.bat または GuidewireSimulator.exe をダブルクリック。
 
 ZIPを開いた画面の中から直接実行せず、フォルダ全体を展開してください。
@@ -17,7 +17,7 @@ GitHubの「Code → Download ZIP」はソース版です。起動用ZIPはRelea
 - 設定 → Viewer設定 → 力学設定 → 剛性減衰βで変更。「適用」で保存。
 - 減衰変更時は計算が再開始され、挿入状態がリセットされます。
 - 下部の計算速度100%は実時間と同じ進行率。直近約1秒の速度を表示します。
-- 設定とログはこのフォルダ内のconfigとruntimeへ保存されます。
+- 設定とログは %LOCALAPPDATA%/GuidewireSimulator に保存されます。アプリの展開先へは書き込みません。
 
 ## この版の内容
 
@@ -46,9 +46,14 @@ build_native.ps1 -FetchToolchain で計算核をビルド後、python portable_l
 exe化には requirements-build.txt と build_portable.ps1 を使用します。
 SOFA本体のインストールとGPUは不要です。
 
+## 2026-10-15 起動修正
+
+Error 13（portable_launcher.py 81行目）の対策として、ログ・設定・実行状態をユーザー用フォルダへ移しました。
+複数プロセスで同じ起動ログを開かないようにしています。
+
 ## 問題があるとき
 
-runtime/startup.log と runtime/session/sofa.log を確認してください。
+%LOCALAPPDATA%/GuidewireSimulator/startup-*.log と sessions/配下のsofa.logを確認してください。
 元のフォルダがなくても動くよう、起動用exeにはPython・NumPy・Pillow・Tkを同梱しています。
 
 ## 出典・ライセンス

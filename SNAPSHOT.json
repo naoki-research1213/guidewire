@@ -10,6 +10,8 @@
   "packaging_changes": [
     "explicit core DLL path",
     "frozen worker dispatch",
-    "portable entry point"
-  ]
+    "portable entry point",
+    "per-user writable data and separate per-process logs"
+  ],
+  "release": "v2026.10.15.1"
 }

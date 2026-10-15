@@ -4,12 +4,21 @@ import json
 import os
 import sys
 import traceback
+import shutil
+import tempfile
 
 def root_path():
     return Path(sys.executable).resolve().parent if getattr(sys, 'frozen', False) else Path(__file__).resolve().parent
 
+def data_path():
+    override = os.environ.get('GUIDEWIRE_PORTABLE_DATA')
+    base = Path(override) if override else Path(os.environ.get('LOCALAPPDATA', tempfile.gettempdir()))/'GuidewireSimulator'
+    base.mkdir(parents=True, exist_ok=True)
+    return base
+
 def main():
     root = root_path()
+    data = data_path()
     sys.path.insert(0, str(root / 'viewer'))
     os.environ['GUIDEWIRE_CORE_LIBRARY'] = str(root / 'runtime/guidewire_core.dll')
     if '--worker' in sys.argv:
@@ -17,13 +26,18 @@ def main():
         run()
         return 0
     # Explicit paths prevent accidental use of another local installation.
-    runtime = root / 'runtime/session'
+    runtime = data / 'sessions' / str(os.getpid())
     runtime.mkdir(parents=True, exist_ok=True)
     os.environ['GUIDEWIRE_RUNTIME_DIR'] = str(runtime)
-    os.environ['GUIDEWIRE_PARAMETERS'] = str(root / 'config/parameters.json')
-    os.environ['GUIDEWIRE_VIEWER_CONFIG'] = str(root / 'config/viewer.json')
+    config = data / 'config'
+    config.mkdir(parents=True, exist_ok=True)
+    for name in ('parameters.json', 'viewer.json'):
+        if not (config/name).exists():
+            shutil.copyfile(root/'config'/name, config/name)
+    os.environ['GUIDEWIRE_PARAMETERS'] = str(config / 'parameters.json')
+    os.environ['GUIDEWIRE_VIEWER_CONFIG'] = str(config / 'viewer.json')
     os.environ['GUIDEWIRE_VESSEL_STL'] = str(root / 'assets/public_sample.stl')
-    profile = json.loads((root/'config/parameters.json').read_text(encoding='utf-8'))
+    profile = json.loads((config/'parameters.json').read_text(encoding='utf-8'))
     os.environ['GUIDEWIRE_INSERTION_DISPLAY_SCALE'] = str(profile['internal_length_m']*1000)
     os.environ.pop('GUIDEWIRE_VIEWER_SNAPSHOT',None)
     os.environ.pop('GUIDEWIRE_VIEWER_FORCE_STATE',None)
@@ -32,7 +46,7 @@ def main():
         import PIL
         import tkinter as tk
         from native_core import NativeCore
-        core = NativeCore(root/'assets/public_sample.stl', root/'config/parameters.json')
+        core = NativeCore(root/'assets/public_sample.stl', config/'parameters.json')
         try:
             for _ in range(3): core.step(1.,0.)
             state=core.read(6)
@@ -41,7 +55,7 @@ def main():
                     'pillow':PIL.__version__, 'simulation_time':float(state[0]),
                     'tip_coordinate':float(state[1]), 'beta':profile['mechanics_code']['rayleigh_stiffness']}
             screen=tk.Tk();screen.withdraw();result['tk']=screen.tk.call('info','patchlevel');screen.destroy()
-            (root/'self-test-result.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+            (data/'self-test-result.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
         finally: core.close()
         return 0
     if '--smoke-test' in sys.argv:
@@ -60,15 +74,15 @@ def main():
                 screen.grab_set() if False else None
                 from PIL import ImageGrab
                 x,y=screen.winfo_rootx(),screen.winfo_rooty()
-                ImageGrab.grab(bbox=(x,y,x+screen.winfo_width(),y+screen.winfo_height())).save(root/'smoke-test-viewer.png')
-                (root/'smoke-test-result.json').write_text(json.dumps({'ok':True,'time':state['time'],'wall_time':state['wall_time'],'settings_opened':True}),encoding='utf-8')
+                ImageGrab.grab(bbox=(x,y,x+screen.winfo_width(),y+screen.winfo_height())).save(data/'smoke-test-viewer.png')
+                (data/'smoke-test-result.json').write_text(json.dumps({'ok':True,'time':state['time'],'wall_time':state['wall_time'],'settings_opened':True}),encoding='utf-8')
                 app.on_close()
             elif attempts[0]>90:
                 app.on_close()
                 raise RuntimeError('No live state from portable worker within startup timeout')
             else: screen.after(500,check)
         screen.after(1000,check);screen.mainloop()
-        if not (root/'smoke-test-result.json').exists():raise RuntimeError('Portable GUI smoke test failed')
+        if not (data/'smoke-test-result.json').exists():raise RuntimeError('Portable GUI smoke test failed')
         return 0
     sys.argv=['xray_viewer.py','--stl',str(root/'assets/public_sample.stl')]
     from xray_viewer import main as viewer_main
@@ -76,7 +90,7 @@ def main():
 
 if __name__=='__main__':
     root=root_path()
-    log=root/'runtime/startup.log';log.parent.mkdir(parents=True,exist_ok=True)
+    log=data_path()/('startup-'+str(os.getpid())+'.log')
     # PyInstaller windowed executables do not provide console streams.
     if sys.stdout is None:sys.stdout=log.open('a',encoding='utf-8',buffering=1)
     if sys.stderr is None:sys.stderr=sys.stdout
@@ -85,5 +99,5 @@ if __name__=='__main__':
         with log.open('a',encoding='utf-8') as stream:traceback.print_exc(file=stream)
         if '--worker' not in sys.argv:
             import ctypes
-            ctypes.windll.user32.MessageBoxW(None,'起動に失敗しました。runtime/startup.log を確認してください。','Guidewire Simulator',16)
+            ctypes.windll.user32.MessageBoxW(None,'起動に失敗しました。ログ: '+str(log),'Guidewire Simulator',16)
         raise

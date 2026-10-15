@@ -1,5 +1,7 @@
 {
   "date": "2026-10-15",
+  "release": "v2026.10.15.1",
+  "permission_regression": "Install-folder startup log and bundled configs were read-only; runtime and settings used a separate user-data folder",
   "self_test": {
     "ok": true,
     "python": "3.9.16",
@@ -12,8 +14,8 @@
   },
   "relocated_gui_test": {
     "ok": true,
-    "time": 0.020000000000000004,
-    "wall_time": 0.09610460000000001,
+    "time": 0.024000000000000007,
+    "wall_time": 0.1461377,
     "settings_opened": true
   },
   "clean_environment": "Python/Conda/Guidewire environment variables removed; PATH only Windows directories",
