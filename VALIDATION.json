@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "release": "v2026.10.15.1",
+  "release": "v2026.10.15.2",
   "permission_regression": "Install-folder startup log and bundled configs were read-only; runtime and settings used a separate user-data folder",
   "self_test": {
     "ok": true,
@@ -14,8 +14,8 @@
   },
   "relocated_gui_test": {
     "ok": true,
-    "time": 0.024000000000000007,
-    "wall_time": 0.1461377,
+    "time": 0.002,
+    "wall_time": 0.001221899999999998,
     "settings_opened": true
   },
   "clean_environment": "Python/Conda/Guidewire environment variables removed; PATH only Windows directories",
@@ -36,6 +36,7 @@
     "long insertion/contact stability",
     "physical force accuracy"
   ],
-  "patient_or_laboratory_meshes_included": false,
+  "oi_mesh_included": false,
+  "standard_vessel_sha256": "dfa1f79da2029072c169221ab713d3f496126747633173e5798a06c7a164890d",
   "native_library_sha256": "89e9b6c57463e80045307996ca91f248a7d50d36ac1404a0f1e507acd0c86aa1"
 }

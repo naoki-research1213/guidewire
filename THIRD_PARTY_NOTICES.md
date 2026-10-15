@@ -9,4 +9,4 @@
 - LLVM runtime: Apache-2.0 with LLVM exception, licenses/LLVM-runtime-LICENSE.txt.
 - OpenSSL 1.1.1: licenses/OpenSSL-1.1.1-LICENSE.txt.
 
-This snapshot ships corresponding numerical source, original headers and extraction provenance. The artificial sample tube was generated for this package. No clinical or laboratory vessel mesh is included. Windows system components retain their original notices and licenses.
+This snapshot ships corresponding numerical source, original headers and extraction provenance. The standard vessel is copied unchanged from the original viewer/assets/vessel.stl. No Oi-folder vessel mesh is included. Windows system components retain their original notices and licenses.

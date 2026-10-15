@@ -2,8 +2,7 @@
   "date": "2026-10-15",
   "base_commit": "30dfdfd",
   "uncommitted_changes_included": true,
-  "patient_data_included": false,
-  "sample_geometry": "artificial tube",
+  "sample_geometry": "original standard vessel, unchanged",
   "alpha": 0.0,
   "beta": 0.02,
   "numerical_source_changed": false,
@@ -13,5 +12,7 @@
     "portable entry point",
     "per-user writable data and separate per-process logs"
   ],
-  "release": "v2026.10.15.1"
+  "release": "v2026.10.15.2",
+  "standard_vessel_sha256": "dfa1f79da2029072c169221ab713d3f496126747633173e5798a06c7a164890d",
+  "oi_data_included": false
 }
