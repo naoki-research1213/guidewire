@@ -1,0 +1,44 @@
+[
+  {
+    "signature": "int LocalMinDistance::computeIntersection(Triangle& e2, Point& e1, OutputVector* contacts, const core::collision::Intersection* currentIntersection)\n",
+    "line": 343,
+    "body_changed": false,
+    "body_sha256": "045077c63f910ee5208b4d8ddb44e8cb88546b34ffceab79edcc554767ac9ede",
+    "commit": "7c18e95d5c5f2839079892c69e7d89a313c79603"
+  },
+  {
+    "signature": "int LocalMinDistance::computeIntersection(Line& e2, Point& e1, OutputVector* contacts, const core::collision::Intersection* currentIntersection)\n",
+    "line": 628,
+    "body_changed": false,
+    "body_sha256": "9a4dc261e2a8d812115682a72b3c64132589b9ea7601e8d9429e8ea54d977205",
+    "commit": "7c18e95d5c5f2839079892c69e7d89a313c79603"
+  },
+  {
+    "signature": "int LocalMinDistance::computeIntersection(Line& e1, Line& e2, OutputVector* contacts, const core::collision::Intersection* currentIntersection)\n",
+    "line": 161,
+    "body_changed": false,
+    "body_sha256": "bc1fc97aa0622431b698debbfa13dfec97e5481bcce7c9f7c4d5fa6532ca8275",
+    "commit": "7c18e95d5c5f2839079892c69e7d89a313c79603"
+  },
+  {
+    "signature": "bool LocalMinDistance::testValidity(Point &p, const Vec3 &PQ) const\n",
+    "line": 1191,
+    "body_changed": false,
+    "body_sha256": "2e3262d97cb597505c95642773242f30fb1e5d18fa212d3436bd87479336fa49",
+    "commit": "7c18e95d5c5f2839079892c69e7d89a313c79603"
+  },
+  {
+    "signature": "bool LocalMinDistance::testValidity(Line &l, const Vec3 &PQ) const\n",
+    "line": 1260,
+    "body_changed": false,
+    "body_sha256": "399ea4025d9f59b02c136bbb22eb6143d0572241a9f1c24b49979b8660580bc0",
+    "commit": "7c18e95d5c5f2839079892c69e7d89a313c79603"
+  },
+  {
+    "signature": "bool LocalMinDistance::testValidity(Triangle &t, const Vec3 &PQ) const\n",
+    "line": 1360,
+    "body_changed": false,
+    "body_sha256": "d5a0de5b7897d65ab118d3618be22ae2689aec78c9aa1b989d072be3e976c50c",
+    "commit": "7c18e95d5c5f2839079892c69e7d89a313c79603"
+  }
+]

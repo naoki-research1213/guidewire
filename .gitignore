@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+build/
+dist/
+_internal/
+*.exe
+*.spec
+runtime/
+self-test-result.json
+smoke-test-*

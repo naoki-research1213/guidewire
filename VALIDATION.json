@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-15",
+  "self_test": {
+    "ok": true,
+    "python": "3.9.16",
+    "numpy": "2.0.2",
+    "pillow": "11.3.0",
+    "simulation_time": 0.006,
+    "tip_coordinate": 0.06000011920928956,
+    "beta": 0.02,
+    "tk": "8.6.12"
+  },
+  "relocated_gui_test": {
+    "ok": true,
+    "time": 0.020000000000000004,
+    "wall_time": 0.09610460000000001,
+    "settings_opened": true
+  },
+  "clean_environment": "Python/Conda/Guidewire environment variables removed; PATH only Windows directories",
+  "relocation": "Folder with spaces and Japanese characters",
+  "verified": [
+    "standalone Python runtime",
+    "native DLL initialization",
+    "three insertion steps",
+    "Tk initialization",
+    "GUI startup",
+    "child worker startup",
+    "live state exchange",
+    "settings window creation",
+    "original numerical source hashes"
+  ],
+  "not_verified": [
+    "execution on a physically separate computer",
+    "long insertion/contact stability",
+    "physical force accuracy"
+  ],
+  "patient_or_laboratory_meshes_included": false,
+  "native_library_sha256": "89e9b6c57463e80045307996ca91f248a7d50d36ac1404a0f1e507acd0c86aa1"
+}

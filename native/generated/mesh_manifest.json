@@ -1,0 +1,56 @@
+[
+  {
+    "source": "MeshSTLLoader.cpp",
+    "line": 93,
+    "body_changed": false,
+    "body_sha256": "87e19d04c2ad713bdc3f8d39f332d2e64dba5b0ed4f7e9b952c5ef6ab61e8839"
+  },
+  {
+    "source": "MeshSTLLoader.cpp",
+    "line": 122,
+    "body_changed": false,
+    "body_sha256": "102f66efa0564069cc3139eba5a89dc3ea01f1ce2dd1dd35dd26c5edea21e5f6"
+  },
+  {
+    "source": "MeshSTLLoader.cpp",
+    "line": 252,
+    "body_changed": false,
+    "body_sha256": "3e742d8ad208e4325e6a49266a377a7f2a2ef018a7f203e7efdc1f9c81e36db6"
+  },
+  {
+    "source": "MeshLoader.cpp",
+    "line": 795,
+    "body_changed": false,
+    "body_sha256": "6739fb114142ceb4908521c33116236f7a6a1cfb8b67b864ad5538240fd646e7"
+  },
+  {
+    "source": "MeshTopology.cpp",
+    "line": 145,
+    "body_changed": false,
+    "body_sha256": "ca7b70ee7151bb7d3fc5e71ca1e4ebea0f32897c7a361c9fbb2aa26e4acc09f1"
+  },
+  {
+    "source": "MeshTopology.cpp",
+    "line": 820,
+    "body_changed": false,
+    "body_sha256": "4d233b2bb9a557ce8b86a7833fffe04d25df31762a705777719decac4d7d591a"
+  },
+  {
+    "source": "MeshTopology.cpp",
+    "line": 857,
+    "body_changed": false,
+    "body_sha256": "21ee2eb636a2b4a7ff4113df8e7a22c66fc55d5bcff0ff1ef825ed0548cab7bf"
+  },
+  {
+    "source": "MeshTopology.cpp",
+    "line": 936,
+    "body_changed": false,
+    "body_sha256": "fcb1d62986410bf66f06cb927e8b6b7a9e2b6bfa0f80f3826f3f262e82681e57"
+  },
+  {
+    "source": "MeshTopology.cpp",
+    "line": 1097,
+    "body_changed": false,
+    "body_sha256": "6077d18414f98d6af0edae62b7093289b8b4243b7945f1970fd17a5feec30b98"
+  }
+]

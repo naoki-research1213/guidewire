@@ -1,0 +1,135 @@
+[
+  {
+    "source": "CubeCollisionModel.cpp",
+    "signature": "void CubeCollisionModel::resize(sofa::Size size)\n",
+    "line": 46,
+    "body_changed": false,
+    "body_sha256": "a395d771e16ddae0e0e95c2829aa928720c00e8effb0672aebfd1bb9cdefbc22"
+  },
+  {
+    "source": "CubeCollisionModel.cpp",
+    "signature": "void CubeCollisionModel::setParentOf(sofa::Index childIndex, const Vec3& min, const Vec3& max)\n",
+    "line": 69,
+    "body_changed": false,
+    "body_sha256": "aee15b724f87ebed3e19a0fa3510d7dffcf0032e51628e312115fe7298593015"
+  },
+  {
+    "source": "CubeCollisionModel.cpp",
+    "signature": "void CubeCollisionModel::setParentOf(sofa::Index childIndex, const Vec3& min, const Vec3& max, const Vec3& normal, const SReal angle)\n",
+    "line": 77,
+    "body_changed": false,
+    "body_sha256": "d19a99bd0168ee17607aacd9c2ca706db43493b5314366440bcb67109f091960"
+  },
+  {
+    "source": "CubeCollisionModel.cpp",
+    "signature": "Index CubeCollisionModel::addCube(Cube subcellsBegin, Cube subcellsEnd)\n",
+    "line": 103,
+    "body_changed": false,
+    "body_sha256": "f151daef1cfd0a4f8dfe18c27681a040ba4c81ee5a93b170d683aaef94e363ed"
+  },
+  {
+    "source": "CubeCollisionModel.cpp",
+    "signature": "void CubeCollisionModel::updateCube(sofa::Index index)\n",
+    "line": 118,
+    "body_changed": false,
+    "body_sha256": "2a8e70970b4e0a4d44a3dcea91d5a6425838eed9916bcee48694f2102eb6babd"
+  },
+  {
+    "source": "CubeCollisionModel.cpp",
+    "signature": "void CubeCollisionModel::updateCubes()\n",
+    "line": 158,
+    "body_changed": false,
+    "body_sha256": "a58ce75a2e949eabc7a80cded26685681891fab3df4f4b6569991e661d7ea5fe"
+  },
+  {
+    "source": "CubeCollisionModel.cpp",
+    "signature": "std::pair<core::CollisionElementIterator,core::CollisionElementIterator> CubeCollisionModel::getInternalChildren(sofa::Index index) const\n",
+    "line": 214,
+    "body_changed": false,
+    "body_sha256": "db6da78ed0c85a65e8564ea60ee90b105be4b2818e796ffeb7c7bdcb603a2cd0"
+  },
+  {
+    "source": "CubeCollisionModel.cpp",
+    "signature": "std::pair<core::CollisionElementIterator,core::CollisionElementIterator> CubeCollisionModel::getExternalChildren(sofa::Index index) const\n",
+    "line": 219,
+    "body_changed": false,
+    "body_sha256": "e61806d7e2e332ed13f39848f5d3fc4e37e983217de05a5a9f9c70681c55cd56"
+  },
+  {
+    "source": "CubeCollisionModel.cpp",
+    "signature": "void CubeCollisionModel::computeBoundingTree(int maxDepth)\n",
+    "line": 229,
+    "body_changed": false,
+    "body_sha256": "7c7946e9681a9f88ee183fe8b4ba4aaf9f489201154fe09a6fd20109c2ec2df0"
+  },
+  {
+    "source": "BVHNarrowPhase.cpp",
+    "signature": "bool BVHNarrowPhase::isSelfCollision(core::CollisionModel* cm1, core::CollisionModel* cm2)\n",
+    "line": 42,
+    "body_changed": false,
+    "body_sha256": "2239f10560fb05944bf9ad8bb42651e40dc8a2c87ba07fc5ed017f7f1ab50b87"
+  },
+  {
+    "source": "BVHNarrowPhase.cpp",
+    "signature": "void BVHNarrowPhase::addCollisionPair(const std::pair<core::CollisionModel*, core::CollisionModel*>& cmPair)\n",
+    "line": 47,
+    "body_changed": false,
+    "body_sha256": "c63d641c95d1d36d6a1b92a8f5bbb95e2ace43b4a650176d285aa5c284489292"
+  },
+  {
+    "source": "BVHNarrowPhase.cpp",
+    "signature": "void BVHNarrowPhase::initializeExternalCells(\n        core::CollisionModel *cm1,\n        core::CollisionModel *cm2,\n        std::queue<TestPair>& externalCells)\n",
+    "line": 108,
+    "body_changed": false,
+    "body_sha256": "18ed488db35468aca73032c7bd1b512db9b3d48a454b37cc18b58e6eff804254"
+  },
+  {
+    "source": "BVHNarrowPhase.cpp",
+    "signature": "void BVHNarrowPhase::processExternalCell(const TestPair &externalCell,\n                                              core::CollisionModel *&cm1,\n                                              core::CollisionModel *&cm2,\n                                              core::collision::ElementIntersector *coarseIntersector,\n                                              const FinestCollision &finest,\n                                              MirrorIntersector *mirror,\n                                              std::queue<TestPair> &externalCells,\n                                              sofa::core::collision::DetectionOutputVector *&outputs) const\n",
+    "line": 135,
+    "body_changed": false,
+    "body_sha256": "03ae152cd6149757e9453a5b2755632afb349145390cffb82608f0e862a21a75"
+  },
+  {
+    "source": "BVHNarrowPhase.cpp",
+    "signature": "void BVHNarrowPhase::processInternalCell(const TestPair &internalCell,\n                                         core::collision::ElementIntersector *coarseIntersector,\n                                         const FinestCollision &finest,\n                                         std::queue<TestPair> &externalCells,\n                                         std::stack<TestPair> &internalCells,\n                                         sofa::core::collision::DetectionOutputVector *&outputs,\n                                         const sofa::core::collision::Intersection* currentIntersection)\n",
+    "line": 183,
+    "body_changed": false,
+    "body_sha256": "4c8dd6bd8708eee87524960ebafb58b8450342f235727488aa2fb6dba07c1746"
+  },
+  {
+    "source": "BVHNarrowPhase.cpp",
+    "signature": "void BVHNarrowPhase::visitCollisionElements(const TestPair &root,\n                                            core::collision::ElementIntersector *coarseIntersector,\n                                            const FinestCollision &finest,\n                                            std::queue<TestPair> &externalCells,\n                                            std::stack<TestPair> &internalCells,\n                                            sofa::core::collision::DetectionOutputVector *&outputs,\n                                            const sofa::core::collision::Intersection* currentIntersection)\n",
+    "line": 204,
+    "body_changed": false,
+    "body_sha256": "20a34d0839bf00c678efd674b118f3f1c46bc56f2019dbf86632a96bae87bc6b"
+  },
+  {
+    "source": "BVHNarrowPhase.cpp",
+    "signature": "void BVHNarrowPhase::visitExternalChildren(const core::CollisionElementIterator &it1,\n                                           const core::CollisionElementIterator &it2,\n                                           core::collision::ElementIntersector *coarseIntersector,\n                                           const FinestCollision &finest,\n                                           std::queue<TestPair> &externalCells,\n                                           sofa::core::collision::DetectionOutputVector *&outputs,\n                                           const sofa::core::collision::Intersection* currentIntersection)\n",
+    "line": 264,
+    "body_changed": false,
+    "body_sha256": "44ea8964707f8d7f5f871af1fc5168d3150702051c56c17986e4f52905a0089c"
+  },
+  {
+    "source": "BVHNarrowPhase.cpp",
+    "signature": "void BVHNarrowPhase::finalCollisionPairs(const TestPair& pair,\n                                         bool selfCollision,\n                                         core::collision::ElementIntersector* intersector,\n                                         sofa::core::collision::DetectionOutputVector*& outputs,\n                                         const sofa::core::collision::Intersection* currentIntersection)\n",
+    "line": 312,
+    "body_changed": false,
+    "body_sha256": "51df6af0b38e01c4f5f1ac2cb7111f16062fa8d9ca76ad1247dcbc551318ed32"
+  },
+  {
+    "source": "BVHNarrowPhase.cpp",
+    "signature": "std::pair<core::CollisionModel*, core::CollisionModel*> BVHNarrowPhase::getCollisionModelsFromTestPair(const TestPair& pair)\n",
+    "line": 334,
+    "body_changed": false,
+    "body_sha256": "04a3a842a0a7e233996344b5e5d7559cce3fc9924f6bd4ff32e3bda6ec5e30d3"
+  },
+  {
+    "source": "BVHNarrowPhase.cpp",
+    "signature": "bool BVHNarrowPhase::isRangeEmpty(const CollisionIteratorRange& range)\n",
+    "line": 341,
+    "body_changed": false,
+    "body_sha256": "890dce9d3764fa656785de71ee7c7f615f580dbc96900ddf698b2b83682b2d19"
+  }
+]

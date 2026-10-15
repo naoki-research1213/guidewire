@@ -1,0 +1,14 @@
+[
+  {
+    "function": "computeInitialGuess",
+    "line": 314,
+    "body_changed": false,
+    "body_sha256": "fca111899758074c1438e68a908561d6de820e00244558fa6b06e09058ecbc14"
+  },
+  {
+    "function": "keepContactForcesValue",
+    "line": 358,
+    "body_changed": false,
+    "body_sha256": "d2b82fcd7427f06e78889794c23fe79a07457b198c5a1568e66b46a1dd9c56b6"
+  }
+]

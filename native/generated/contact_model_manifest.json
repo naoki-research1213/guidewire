@@ -1,0 +1,56 @@
+[
+  {
+    "source": "BaseContactLagrangianConstraint.inl",
+    "line": 57,
+    "body_changed": false,
+    "body_sha256": "299f837d78724d85f9ce1d7c236c2dbf379b9e505f69e8de0829f6dc261c6f28"
+  },
+  {
+    "source": "BaseContactLagrangianConstraint.inl",
+    "line": 66,
+    "body_changed": false,
+    "body_sha256": "243db4c58cffec39383cef3a7d7398c0b845562b0f5d09f7927d31528b045f3b"
+  },
+  {
+    "source": "BaseContactLagrangianConstraint.inl",
+    "line": 79,
+    "body_changed": false,
+    "body_sha256": "fb0fe578b55d96ded162ddda2059b9b1ca4f98e908a871da6f69c42054dd8dfa"
+  },
+  {
+    "source": "BaseContactLagrangianConstraint.inl",
+    "line": 102,
+    "body_changed": false,
+    "body_sha256": "33eeb7871e8de0096ef5830f7cf45c2165a2b3229a0e89befb139ec65d04d075"
+  },
+  {
+    "source": "BaseContactLagrangianConstraint.inl",
+    "line": 179,
+    "body_changed": false,
+    "body_sha256": "eaf324fa3e3a83793227b0847097d116d562f40341ab37c714050809e4e365ec"
+  },
+  {
+    "source": "BaseContactLagrangianConstraint.inl",
+    "line": 315,
+    "body_changed": false,
+    "body_sha256": "b69a10db7475a8208223daca21cab2eb653675a9536bf7b860137d9e7360b548"
+  },
+  {
+    "source": "BaseUnilateralContactResponse.inl",
+    "line": 88,
+    "body_changed": false,
+    "body_sha256": "152fffd9c67280dafc96c1217a1d785cb87024b9caf64ec635ebc49bfd086d54"
+  },
+  {
+    "source": "BaseUnilateralContactResponse.inl",
+    "line": 129,
+    "body_changed": false,
+    "body_sha256": "5fd5442e78f8f5af9cae7ac7e2ffdab733e57040d7f0be2365b5b7172c825f96"
+  },
+  {
+    "source": "BaseUnilateralContactResponse.inl",
+    "line": 201,
+    "body_changed": false,
+    "body_sha256": "4a4a50530710d5acebb51b7c422077ceb7d325022a537cad2115d3a1834c627f"
+  }
+]

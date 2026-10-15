@@ -1,0 +1,282 @@
+[
+  {
+    "source": "BeamAdapter/src/BaseBeamInterpolation.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "BaseBeamInterpolation::getControlPointsFromFrame",
+    "line": 38,
+    "signature_before": "void BaseBeamInterpolation<DataTypes>::getControlPointsFromFrame(const Transform& global_H_local0, const Transform& global_H_local1,\n    const Real L,\n    Vec3& P0, Vec3& P1,\n    Vec3& P2, Vec3& P3)\n",
+    "signature_after": "void Interpolation::getControlPointsFromFrame(const Transform& global_H_local0, const Transform& global_H_local1,\n    const Real L,\n    Vec3& P0, Vec3& P1,\n    Vec3& P2, Vec3& P3)\n",
+    "body_sha256": "101242238a4acf8f15d156e86f5f0ce96777e3069e35baed9ae7ecc077c4d3fd",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/BaseBeamInterpolation.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "BaseBeamInterpolation::RotateFrameForAlignNormalizedX",
+    "line": 60,
+    "signature_before": "void BaseBeamInterpolation<DataTypes>::RotateFrameForAlignNormalizedX(const Quat& input, const Vec3& x, Quat& output)\n",
+    "signature_after": "void Interpolation::RotateFrameForAlignNormalizedX(const Quat& input, const Vec3& x, Quat& output)\n",
+    "body_sha256": "d4e6cefb6cb2032676a8b79cb2284fc83d8b2fb8bb58f75f05f0f05ea1543fa1",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/BaseBeamInterpolation.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "BaseBeamInterpolation::computeActualLength",
+    "line": 448,
+    "signature_before": "void BaseBeamInterpolation<DataTypes>::computeActualLength(Real& length, const Vec3& P0, const Vec3& P1, const Vec3& P2, const Vec3& P3)\n",
+    "signature_after": "void Interpolation::computeActualLength(Real& length, const Vec3& P0, const Vec3& P1, const Vec3& P2, const Vec3& P3)\n",
+    "body_sha256": "c8b2a9faec7b05bf707bf03ba675c6866a73c34e366e946873a3a8705f87952a",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/BaseBeamInterpolation.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "BaseBeamInterpolation::computeStrechAndTwist",
+    "line": 491,
+    "signature_before": "void BaseBeamInterpolation<DataTypes>::computeStrechAndTwist(const EdgeID edgeInList, const VecCoord& x, Vec3& ResultNodeO, Vec3& ResultNode1)\n",
+    "signature_after": "void Interpolation::computeStrechAndTwist(const unsigned edgeInList, const VecCoord& x, Vec3& ResultNodeO, Vec3& ResultNode1)\n",
+    "body_sha256": "984e68ad3b59802ec08f4b7991c9bb58f44c8ecb5e8854587c1bcab39bd7d681",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/BaseBeamInterpolation.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "BaseBeamInterpolation::InterpolateTransformUsingSpline",
+    "line": 726,
+    "signature_before": "void BaseBeamInterpolation<DataTypes>::InterpolateTransformUsingSpline(Transform& global_H_localResult,\n    const Real baryCoord,\n    const Transform& global_H_local0,\n    const Transform& global_H_local1,\n    const Real L)\n",
+    "signature_after": "void Interpolation::InterpolateTransformUsingSpline(Transform& global_H_localResult,\n    const Real baryCoord,\n    const Transform& global_H_local0,\n    const Transform& global_H_local1,\n    const Real L)\n",
+    "body_sha256": "ec1201328ec1a840e82d1a20b98f5effc85018d23a0a77a7b5729eb3181f2d11",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/BaseBeamInterpolation.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "BaseBeamInterpolation::InterpolateTransformUsingSpline",
+    "line": 700,
+    "signature_before": "void BaseBeamInterpolation<DataTypes>::InterpolateTransformUsingSpline(const EdgeID edgeInList,\n    const Real baryCoord,\n    const Vec3& localPos,\n    const VecCoord& x,\n    Transform& global_H_localInterpol)\n",
+    "signature_after": "void Interpolation::InterpolateTransformUsingSpline(const unsigned edgeInList,\n    const Real baryCoord,\n    const Vec3& localPos,\n    const VecCoord& x,\n    Transform& global_H_localInterpol)\n",
+    "body_sha256": "49ff12112ba8696f51dd45ef8b07a285c0a15e007940b70013111768891bc4b2",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/BaseBeamInterpolation.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "BaseBeamInterpolation::interpolatePointUsingSpline",
+    "line": 614,
+    "signature_before": "void BaseBeamInterpolation<DataTypes>::interpolatePointUsingSpline(const EdgeID edgeInList,\n    const Real baryCoord,\n    const Vec3& localPos,\n    const VecCoord& x,\n    Vec3& posResult,\n    bool recompute,\n    const sofa::core::ConstVecCoordId& vecXId)\n",
+    "signature_after": "void Interpolation::interpolatePointUsingSpline(const unsigned edgeInList,\n    const Real baryCoord,\n    const Vec3& localPos,\n    const VecCoord& x,\n    Vec3& posResult,\n    bool recompute,\n    const sofa::core::ConstVecCoordId& vecXId)\n",
+    "body_sha256": "88766da61270d9d2431f950f4494dd513427e7a24342dcf956e9c8a778b684c9",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/BaseBeamInterpolation.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "BaseBeamInterpolation::getBeamAtCurvAbs",
+    "line": 257,
+    "signature_before": "void BaseBeamInterpolation<DataTypes>::getBeamAtCurvAbs(const Real x_input, unsigned int& edgeInList_output, Real& baryCoord_output, unsigned int start)\n",
+    "signature_after": "void Interpolation::getBeamAtCurvAbs(const Real x_input, unsigned int& edgeInList_output, Real& baryCoord_output, unsigned int start)\n",
+    "body_sha256": "1504c3180ff5805297777d1d0976547d76a7226ef71fb0b23ba4fe20f45b001c",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/BaseBeamInterpolation.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "BaseBeamInterpolation::MapForceOnNodeUsingSpline",
+    "line": 899,
+    "signature_before": "void BaseBeamInterpolation<DataTypes>::MapForceOnNodeUsingSpline(const EdgeID edgeInList,\n    const Real baryCoord, const Vec3& localPos,\n    const VecCoord& x, const Vec3& finput,\n    SpatialVector& FNode0output, SpatialVector& FNode1output)\n",
+    "signature_after": "void Interpolation::MapForceOnNodeUsingSpline(const unsigned edgeInList,\n    const Real baryCoord, const Vec3& localPos,\n    const VecCoord& x, const Vec3& finput,\n    SpatialVector& FNode0output, SpatialVector& FNode1output)\n",
+    "body_sha256": "1f5c46b6f5999783077e4d8b69a5f8b1afaa110a509f537d0a1be90d12aae97a",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/engine/WireRestShape.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "WireRestShape::getCollisionSampling",
+    "line": 236,
+    "signature_before": "void WireRestShape<DataTypes>::getCollisionSampling(Real &dx, const Real x_curv)\n",
+    "signature_after": "void Interpolation::getCollisionSampling(Real &dx, const Real x_curv)\n",
+    "body_sha256": "0606bc5243cd5dffd6c704e925d570f13dd5388a21ee377cad86668ec00e4eed",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/model/RodSpireSection.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "RodSpireSection::getRestTransformOnX",
+    "line": 56,
+    "signature_before": "void RodSpireSection<DataTypes>::getRestTransformOnX(Transform& global_H_local, const Real x_used, const Real x_start)\n",
+    "signature_after": "void RestShape::spire(Transform& global_H_local, const Real x_used, const Real x_start)\n",
+    "body_sha256": "e709013928fb1eb0fd3ddcd50acaca99c8bd37abcb445eb5285ab4d6175f60fb",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/model/RodStraightSection.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "RodStraightSection::getRestTransformOnX",
+    "line": 54,
+    "signature_before": "void RodStraightSection<DataTypes>::getRestTransformOnX(Transform& global_H_local, const Real x_used, const Real x_start)\n",
+    "signature_after": "void RestShape::straight(Transform& global_H_local, const Real x_used, const Real x_start)\n",
+    "body_sha256": "1125e5a67a85e3d6b750a874aac4ed3fb365cd86d703c66a608d4aa61b5993ed",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/engine/WireRestShape.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "WireRestShape::getRestTransformOnX",
+    "line": 305,
+    "signature_before": "void WireRestShape<DataTypes>::getRestTransformOnX(Transform &global_H_local, const Real x)\n",
+    "signature_after": "void RestShape::getRestTransformOnX(Transform &global_H_local, const Real x)\n",
+    "body_sha256": "5edbc59d54961edff9e19e0b1be432af3ce5bf52dc3587439e1f4367c1a771a5",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/forcefield/AdaptiveBeamForceFieldAndMass.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "AdaptiveBeamForceFieldAndMass::computeStiffness",
+    "line": 126,
+    "signature_before": "void AdaptiveBeamForceFieldAndMass<DataTypes>::computeStiffness(const sofa::Index beamId, BeamLocalMatrices& beamLocalMatrices)\n",
+    "signature_after": "void ForceField::computeStiffness(const sofa::Index beamId, BeamLocalMatrices& beamLocalMatrices)\n",
+    "body_sha256": "e190d954756e6ee9fe5bee8031264539e4d105ec2c3bc7ffab3a784dcd1410cc",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/forcefield/AdaptiveBeamForceFieldAndMass.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "AdaptiveBeamForceFieldAndMass::computeMass",
+    "line": 194,
+    "signature_before": "void AdaptiveBeamForceFieldAndMass<DataTypes>::computeMass(const sofa::Index beamID, BeamLocalMatrices& beamLocalMatrix)\n",
+    "signature_after": "void ForceField::computeMass(const sofa::Index beamID, BeamLocalMatrices& beamLocalMatrix)\n",
+    "body_sha256": "53a3ff77dcba37abafa8e1f00f391fed7a0a6366abc4eca162e306c7b4cdd6ee",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/forcefield/AdaptiveBeamForceFieldAndMass.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "AdaptiveBeamForceFieldAndMass::applyStiffnessLarge",
+    "line": 252,
+    "signature_before": "void AdaptiveBeamForceFieldAndMass<DataTypes>::applyStiffnessLarge( VecDeriv& df, const VecDeriv& dx,\n                                                                    const sofa::Index beamID, const sofa::Index nd0Id, const sofa::Index nd1Id,\n                                                                    const SReal factor )\n",
+    "signature_after": "void ForceField::applyStiffnessLarge( VecDeriv& df, const VecDeriv& dx,\n                                                                    const sofa::Index beamID, const sofa::Index nd0Id, const sofa::Index nd1Id,\n                                                                    const SReal factor )\n",
+    "body_sha256": "5845f337f0f011ca230dee25f6e394288c0cf3f0688a0f089d4fa5dbdb5e68ff",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/forcefield/AdaptiveBeamForceFieldAndMass.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "AdaptiveBeamForceFieldAndMass::applyMassLarge",
+    "line": 290,
+    "signature_before": "void AdaptiveBeamForceFieldAndMass<DataTypes>::applyMassLarge(VecDeriv& df, const sofa::Index beamID, const sofa::Index nd0Id, const sofa::Index nd1Id, const SReal factor)\n",
+    "signature_after": "void ForceField::applyMassLarge(VecDeriv& df, const sofa::Index beamID, const sofa::Index nd0Id, const sofa::Index nd1Id, const SReal factor)\n",
+    "body_sha256": "d48ce02a7b14ff76bb31d1eb0938d93fd0fe589932cf5496b4d74a6c64541a1d",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/forcefield/AdaptiveBeamForceFieldAndMass.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "AdaptiveBeamForceFieldAndMass::addMDx",
+    "line": 321,
+    "signature_before": "void AdaptiveBeamForceFieldAndMass<DataTypes>::addMDx(const sofa::core::MechanicalParams* mparams , DataVecDeriv& dataf, const DataVecDeriv& datadx, const SReal factor)\n",
+    "signature_after": "void ForceField::addMDx(const MechanicalParams* mparams , DataVecDeriv& dataf, const DataVecDeriv& datadx, const SReal factor)\n",
+    "body_sha256": "08c95f9550ff82f0318051be7d39f1912f9585b2dfaf70e5981b8e790964b30b",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/forcefield/AdaptiveBeamForceFieldAndMass.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "AdaptiveBeamForceFieldAndMass::addForce",
+    "line": 485,
+    "signature_before": "void AdaptiveBeamForceFieldAndMass<DataTypes>::addForce (const sofa::core::MechanicalParams* mparams ,\n                                                         DataVecDeriv& dataf,\n                                                         const DataVecCoord& datax,\n                                                         const DataVecDeriv& v)\n",
+    "signature_after": "void ForceField::addForce (const MechanicalParams* mparams ,\n                                                         DataVecDeriv& dataf,\n                                                         const DataVecCoord& datax,\n                                                         const DataVecDeriv& v)\n",
+    "body_sha256": "af43be3314551935e883b56cfebae85beaf72b6f97b27d45947d6e9ff4986ef3",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/forcefield/AdaptiveBeamForceFieldAndMass.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "AdaptiveBeamForceFieldAndMass::addMBKToMatrix",
+    "line": 411,
+    "signature_before": "void AdaptiveBeamForceFieldAndMass<DataTypes>::addMBKToMatrix(const sofa::core::MechanicalParams* mparams,\n                                                              const sofa::core::behavior::MultiMatrixAccessor* matrix)\n",
+    "signature_after": "void ForceField::addMBKToMatrix(const MechanicalParams* mparams,\n                                                              const sofa::core::behavior::MultiMatrixAccessor* matrix)\n",
+    "body_sha256": "086b24bd2c0457121a147f5f0af40351642801d774ddd130e16790376bb9d48d",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/controller/InterventionalRadiologyController.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "InterventionalRadiologyController::computeInstrumentsCurvAbs",
+    "line": 542,
+    "signature_before": "void InterventionalRadiologyController<DataTypes>::computeInstrumentsCurvAbs(type::vector<Real> &newCurvAbs,\n    const type::vector<Real>& tools_xBegin,\n    const Real& totalLength)\n",
+    "signature_after": "void Controller::computeInstrumentsCurvAbs(type::vector<Real> &newCurvAbs,\n    const type::vector<Real>& tools_xBegin,\n    const Real& totalLength)\n",
+    "body_sha256": "4e8a1e88c5d19c1c5ee79db2a07f83b04f9f4601575f724f6826146f276f86cc",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/controller/InterventionalRadiologyController.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "InterventionalRadiologyController::totalLengthIsChanging",
+    "line": 1045,
+    "signature_before": "void InterventionalRadiologyController<DataTypes>::totalLengthIsChanging(const type::vector<Real>& newNodeCurvAbs,\n                                                                         type::vector<Real>& modifiedNodeCurvAbs,\n                                                                         const type::vector< type::vector<int> >& newTable)\n",
+    "signature_after": "void Controller::totalLengthIsChanging(const type::vector<Real>& newNodeCurvAbs,\n                                                                         type::vector<Real>& modifiedNodeCurvAbs,\n                                                                         const type::vector< type::vector<int> >& newTable)\n",
+    "body_sha256": "94d0cf28e187cfdcc9c0035ac74be4e18f7b811d3fdf461cfb6e14b7df9ad110",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/controller/InterventionalRadiologyController.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "InterventionalRadiologyController::sortCurvAbs",
+    "line": 1077,
+    "signature_before": "void InterventionalRadiologyController<DataTypes>::sortCurvAbs(type::vector<Real> &curvAbs)\n",
+    "signature_after": "void Controller::sortCurvAbs(type::vector<Real> &curvAbs)\n",
+    "body_sha256": "de723f82fe35465b01de301a85624d1e2ed6b6e99178df24e955f2d29ff42487",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/controller/InterventionalRadiologyController.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "InterventionalRadiologyController::fillInstrumentCurvAbsTable",
+    "line": 1092,
+    "signature_before": "void InterventionalRadiologyController<DataTypes>::fillInstrumentCurvAbsTable(const type::vector<Real>& curvAbs, \n    const type::vector<Real>& tools_xBegin,\n    const type::vector<Real>& tools_xEnd,\n    type::vector< type::vector<int> >& idInstrumentTable)\n",
+    "signature_after": "void Controller::fillInstrumentCurvAbsTable(const type::vector<Real>& curvAbs, \n    const type::vector<Real>& tools_xBegin,\n    const type::vector<Real>& tools_xEnd,\n    type::vector< type::vector<int> >& idInstrumentTable)\n",
+    "body_sha256": "d260e73559259b662051bd92240754551c5f9c872177e8d03d3726071eb27f5f",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/controller/InterventionalRadiologyController.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "InterventionalRadiologyController::fixFirstNodesWithUntil",
+    "line": 1129,
+    "signature_before": "void InterventionalRadiologyController<DataTypes>::fixFirstNodesWithUntil(unsigned int firstSimulatedNode)\n",
+    "signature_after": "void Controller::fixFirstNodesWithUntil(unsigned int firstSimulatedNode)\n",
+    "body_sha256": "3090fbeb01d9ccfc9795f18efeb38bfbd13ea5887cc2e3711dd45b9e81302b2c",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/controller/InterventionalRadiologyController.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "InterventionalRadiologyController::activateBeamListForCollision",
+    "line": 753,
+    "signature_before": "void InterventionalRadiologyController<DataTypes>::activateBeamListForCollision( type::vector<Real> &curv_abs,\n                                                                                 type::vector< type::vector<int> > &idInstrumentTable)\n",
+    "signature_after": "void Controller::activateBeamListForCollision( type::vector<Real> &curv_abs,\n                                                                                 type::vector< type::vector<int> > &idInstrumentTable)\n",
+    "body_sha256": "c09bdae18b9b6ef5d4e2e5cf5c4dda2785813064c404381813057fe012b0111d",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/controller/InterventionalRadiologyController.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "InterventionalRadiologyController::interventionalRadiologyCollisionControls",
+    "line": 643,
+    "signature_before": "void InterventionalRadiologyController<DataTypes>::interventionalRadiologyCollisionControls(type::vector<Real> &xPointList,\n                                                                                            type::vector<int> &idInstrumentList,\n                                                                                            type::vector<int> &removeEdge)\n",
+    "signature_after": "void Controller::interventionalRadiologyCollisionControls(type::vector<Real> &xPointList,\n                                                                                            type::vector<int> &idInstrumentList,\n                                                                                            type::vector<int> &removeEdge)\n",
+    "body_sha256": "53d9a03c60b911538dbc39f24f2b7649ae931ea9aa6616c922418ab5b4bcd04e",
+    "body_changed": false
+  },
+  {
+    "source": "BeamAdapter/src/controller/InterventionalRadiologyController.inl",
+    "commit": "cac4005bd7c9f266c5c775ab88cebbd7c7fa83c7",
+    "function": "InterventionalRadiologyController::applyInterventionalRadiologyController",
+    "line": 803,
+    "signature_before": "void InterventionalRadiologyController<DataTypes>::applyInterventionalRadiologyController()\n",
+    "signature_after": "void Controller::applyInterventionalRadiologyController()\n",
+    "body_sha256": "c9bd6e8521d0dc940519b82f0b66ec728693a008d8db9956300f216f367b0477",
+    "body_changed": false
+  }
+]

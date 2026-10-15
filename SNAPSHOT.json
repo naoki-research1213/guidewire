@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-15",
+  "base_commit": "30dfdfd",
+  "uncommitted_changes_included": true,
+  "patient_data_included": false,
+  "sample_geometry": "artificial tube",
+  "alpha": 0.0,
+  "beta": 0.02,
+  "numerical_source_changed": false,
+  "packaging_changes": [
+    "explicit core DLL path",
+    "frozen worker dispatch",
+    "portable entry point"
+  ]
+}

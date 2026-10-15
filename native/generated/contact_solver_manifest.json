@@ -1,0 +1,23 @@
+[
+  {
+    "source": "LCPcalc.cpp",
+    "function": "LocalBlock33::compute",
+    "line": 549,
+    "body_changed": false,
+    "body_sha256": "454ac6c6bf79ef034af52007e1412a1269839523ad0b574630d508a5f14ca8d4"
+  },
+  {
+    "source": "LCPcalc.cpp",
+    "function": "LocalBlock33::New_GS_State",
+    "line": 612,
+    "body_changed": false,
+    "body_sha256": "a6b157141c059f125ba6d46f58e10f19b506bfbd21bd809f5bc54cd95ecf06ba"
+  },
+  {
+    "source": "LCPConstraintSolver.cpp",
+    "function": "nlcp_gaussseidel_unbuilt",
+    "line": 391,
+    "body_changed": false,
+    "body_sha256": "38a2c76cc37041a997e9a4c850822b4932e71d45bf7777cb118eb342f2d4bd2e"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "function": "computeIdxAndBaryCoordsForAbs",
+    "line": 567,
+    "body_changed": false,
+    "body_sha256": "5d4e89b61e10511b817adc5716578b720986aa80ffc87593ec781634e36fb400"
+  },
+  {
+    "function": "computeDistribution",
+    "line": 578,
+    "body_changed": false,
+    "body_sha256": "9b333530482600ea74b4a08e0fc59aed8bbc24a54cdaf7e1be269f17b4acc6f6"
+  },
+  {
+    "function": "applyJTonPoint",
+    "line": 783,
+    "body_changed": false,
+    "body_sha256": "2d50b5b169cd577e5ea97510215ea73e9e6b57a398bcc9844de4cd8c011a55d7"
+  },
+  {
+    "function": "applyJonPoint",
+    "line": 720,
+    "body_changed": false,
+    "body_sha256": "210b5fa19545a658b6c1b728cc9a816c8bf83809931dedc43f64136fdef79c58"
+  },
+  {
+    "function": "apply",
+    "line": 201,
+    "body_changed": false,
+    "body_sha256": "b7b0cc85ca6b12b90ec4af44b83b6498946670398e95a65dbeb0c57af5b10257"
+  },
+  {
+    "function": "applyJ",
+    "line": 296,
+    "body_changed": false,
+    "body_sha256": "1a7cf607bd5e79a28b3e660d891613bc2fedf378bf16c092e55eb7f53febed0c"
+  },
+  {
+    "function": "applyJT",
+    "line": 408,
+    "body_changed": false,
+    "body_sha256": "3590862c0d452c50049186ededdeff70a617a795a4f1be3ca1313f03cd175787"
+  }
+]

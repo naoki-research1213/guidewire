@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "name": "低減衰試用（β=0.02）：NiTiオーステナイト（線形近似）、中実直径0.36mm",
+  "internal_length_m": 0.00016666666666666666,
+  "geometry_m": {
+    "radius": 0.00018,
+    "straight_length": 0.16333333333333333,
+    "tip_length": 0.003333333333333333,
+    "spire_diameter": 0.004166666666666667,
+    "redistribution_threshold": 1.6666666666666667e-06
+  },
+  "mechanics_code": {
+    "rayleigh_mass": 0.0,
+    "rayleigh_stiffness": 0.02
+  },
+  "numerics": {
+    "dt_s": 0.002,
+    "contact_tolerance_code": 0.0001,
+    "contact_max_iterations": 5000
+  },
+  "input": {
+    "insertion_speed_m_s": 0.0016666666666666668,
+    "rotation_speed_rad_s": 0.5
+  },
+  "contact": {
+    "alarm_distance_m": 0.0003333333333333333,
+    "distance_m": 0.00018,
+    "friction": 0.15,
+    "angle_cone": 0.2,
+    "cone_factor": 0.5
+  },
+  "viewer": {
+    "display_diameter_mm": 0.36
+  },
+  "sources": [
+    "https://medical.asahi-intecc.com/en/products-neuro/asahi-chikai.html",
+    "https://www.jacques-allemann.com/file/2478/Legierungen%20/%20Tech-Sheets/JAS%20-%20Tech%20Sheet%20/%20Werkstoffe/jas-036-tech-sheet-nitinol.pdf"
+  ],
+  "notes": "材料メーカーのE/密度を使用する均一な中実円断面の比較。CHIKAI完成品の実測校正ではない。ν=0.3、摩擦、剛性減衰、拘束ばね、自然形状は仮定/数値設定。原addMDxの入力無視により質量減衰が重力項を読むためα=0とし、この非標準項を設定で無効化。原関数は変更しない。NiTiは相変態・履歴を再現しない。",
+  "internal_mass_kg": 1.0,
+  "material_si": {
+    "young_modulus_pa": 75000000000.0,
+    "density_kg_m3": 6500.0,
+    "poisson_ratio_assumed": 0.3,
+    "gravity_y_m_s2": -9.81
+  },
+  "boundary_si": {
+    "translation_stiffness_n_m": 100000000.0,
+    "rotation_stiffness_n_m_rad": 2.7777777777777777
+  }
+}
